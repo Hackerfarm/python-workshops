@@ -1,0 +1,37 @@
+Preview
+
+Here's another Christmas present for you guys in the opensource community :)
+
+I just made this Castle to replace the ugly and questionably licensed one I had on dusk from years ago... before OpenGameArt existed. http://duskrpg.blogspot.com/
+
+I also told Bertram that I would try and come up with a Castle to help him complete the tilesets he needs to make his game "Valyria Tear"  I know Roots was asking for artists to draw up a Castle for his game "Hero of Allacrost" before he dissappeared, so this is a christmas present to both those guys and also a welcome back gift to Roots.
+
+The Castle roof blocks could use better texturing but I think I've nailed the general shape of the castle ;-]
+
+I hope you guys like the example screenshot I've drawn up with Tiled.
+
+Most of what you see in the example came out of tilesets I've submitted to OGA but there is a couple things I think I should point out that didn't come from my submissions.  The bridge came from The Mana World (Irukard I think).  The boat, dock, water ripple and a couple sacks came from LPC's Daneeklu.
+
+Edit:  I drew this awesome example to show whats possible with the art assets that are available on OGA.  The only thing in this example that isn't on OGA is the big bridge which was made for The Mana World by Irukard licensed GPL.  Everything else is either licensed CC BY 3.0 or CC BY SA 3.0.  The following links will bring you to all the tilesets I've used in this example.
+
+Irukards big bridge (GPL):  http://forums.themanaworld.org/viewtopic.php?f=8&t=14884&sid=4695e444f4b...
+
+Daneeklu's LPC submission (CC BY SA 3.0): http://opengameart.org/content/farming-tilesets-magic-animations-and-ui-...
+
+Hyptosis' huge collection of 2d tiles (CC BY 3.0): http://opengameart.org/content/lots-of-free-2d-tiles-and-sprites-by-hypt...
+
+Jetrel's wood tileset (CC BY SA 3.0): http://opengameart.org/content/2d-lost-garden-tileset-transition-to-jetr...
+
+Daniel Cooks grass from Lost Garden tiles resized to 32x32 (CC BY 3.0): http://opengameart.org/content/2d-lost-garden-zelda-style-tiles-resized-...
+
+Oh and if it's a problem having the big bridge (only GPL item) I'll remap that area with something under a CC license.
+
+50% of what you see in the tileset was created by me and 50% is Hyptosis' stuff I thought would fit in with the Castle--End of edit
+
+There's a lot of neat things going on in the screenshot.  Cute birds in the trees, somebody's been killing people and disposing of their bodies by chucking them off the bridges.
+
+I drew the entire castle using 1 wall tile I got from Hyptosis' stuff.  I made the new grass to water variations (using bit's and pieces of what hyptosis created-thats 100% his grass-and I used his idea of blending into water with his rocks so credit there goes 50-50%), the water tile (50%Zabin-50%Hytosis), the water fall, marketplace, code of arms, smaller anvil, bigger gold/coal crates, longer ladder, bigger flags, window, bookshelves, recolored the rock ground, splitting block, and decorations.
+
+I've basically organized a lot of stuff Hyptosis made into this Castle Tileset while creating a lot of new stuff to try and complete the castle.
+Attribution Instructions: 
+Zabin, Hyptosis, and Danial Cook and a link back to www.OpenGameart.org
