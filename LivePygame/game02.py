@@ -52,7 +52,14 @@ class Game:
                         break
                 if callit:
                     self.event_handlers[eh](event)
-                    
+					
+    def refresh(self):
+        self.scene = list()
+        self.scene.append(Map())
+        self.player = Character(100,100)
+        self.scene.append(self.player)
+        self.event_handlers[(('type',pygame.KEYDOWN),)] = self.player.handle_keydown
+                            
     def mainloop(self):
         pygame.init()
         self.disp=pygame.display.set_mode(self.size, pygame.HWSURFACE | pygame.DOUBLEBUF)
@@ -86,34 +93,12 @@ class Map:
         self.avg_time = 0.9*self.avg_time + 0.1*float(pygame.time.get_ticks()-ta)
 
 class Character:
-    def __init__(self, x, y):
-        self.img=pygame.image.load("art/LPC/walk.png")
-        self.frames = list()
-        self.cycle_index = 0
-        self.cycle_tick = 0
-        self.cycle_tick_per_frame = 100
-        self.cycle_length = 7
-        for i in range(self.cycle_length):
-            self.frames.append(self.img.subsurface((64+i*64,0,64,64)))
-        self.pos = (x,y)
-        
-    def update(self, dt):
-        self.cycle_tick = (self.cycle_tick + dt) % (self.cycle_length*self.cycle_tick_per_frame)
-        self.cycle_index = int(self.cycle_tick/self.cycle_tick_per_frame)
-        pass
-        
-    def render(self, display):
-        display.blit(self.frames[self.cycle_index], (self.pos[0]+200, self.pos[1]))
-
-
-
-
-class Character:
     def __init__(self, x, y):    
         self.img=pygame.image.load("art/LPC/walk.png")
         # Each animation is stored in the anim dict as a list with the following 
         # format: (tick_per_frame, frame1, frame2, ...)
-        
+		
+        self.dirs={"up":(0,-0.5),"down":(0,0.5), "right":(1,0), "left":(-1,0)}
         self.anim = dict()
         self.cycle_index = 0
         self.cycle_tick = 0
@@ -145,10 +130,10 @@ class Character:
         self.current_frames = self.anim[self.current_anim]
         self.pos = [x,y]
 
+
     def update(self, dt):
-        dirs={"up":(0,-0.5),"down":(0,0.5), "right":(1,0), "left":(-1,0)}
         ca = self.anim[self.current_anim]
-        dxdy = dirs[self.current_anim]
+        dxdy = self.dirs[self.current_anim]
         self.cycle_tick = (self.cycle_tick + dt) % ((len(ca)-1)*ca[0])
         self.cycle_index = int(self.cycle_tick/ca[0])
         self.pos[0]+=dxdy[0]
@@ -173,12 +158,12 @@ class Character:
 
 if __name__ == "__main__":
 
-	game = Game()
-	game.scene.append(Map())
-	game.player = Character(100,100)
-	game.scene.append(game.player)
-	game.event_handlers[(('type',pygame.KEYDOWN),)] = game.player.handle_keydown
+    game = Game()
+    game.scene.append(Map())
+    game.player = Character(100,100)
+    game.scene.append(game.player)
+    game.event_handlers[(('type',pygame.KEYDOWN),)] = game.player.handle_keydown
 
 
-	th = threading.Thread(target = game.mainloop)
-	th.start()
+    th = threading.Thread(target = game.mainloop)
+    th.start()
